@@ -5,12 +5,6 @@
     
     ORG 0 
 
-    BANKSEL PORTA
-    CLRF PORTA
-    BANKSEL LATA
-    CLRF LATA
-    BANKSEL ANSELA
-    CLRF ANSELA
     BANKSEL TRISA
     BCF TRISA, RA5
 	
@@ -21,7 +15,7 @@ HERE
     CALL DELAY_SEC
     BCF PORTA, RA5 ;LED OFF
     CALL DELAY_SEC
-GOTO HERE
+    GOTO HERE
 
 ; We are using the default 500 kHz oscillator
 ; 1 instruction cycle = 4 oscillator cycles
